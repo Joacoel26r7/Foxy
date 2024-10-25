@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro proceso</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <h3 id="volver"><a href="index.html">Volver</a></h3>
+
+    <h1>Ve aquí nuestro proceso con Foxy...</h1>
+
+    <div class="main-video">
+        <video controls class="video">
+            <source src="media/video1.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+    <div class="footer">
+        <p>Proyecto Foxy, dio inicios.</p>
+    </div>
+
+    <div class="video-container">
+        <video controls class="video">
+            <source src="media/video2.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <video controls class="video">
+            <source src="media/video3nuevo.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <video controls class="video">
+            <source src="media/video4.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+    <div class="footer">
+        <p>Y surgieron las complicaciones...</p>
+    </div>
+
+    <div class="video-container">
+        <video controls class="video">
+            <source src="media/video5.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <video controls class="video">
+            <source src="media/video6.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <video controls class="video">
+            <source src="media/video7.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+    <div class="footer">
+        <p>Y al final... Proyecto Foxy se prepara para salir a la luz.</p>
+    </div>
+
+    <div class="video-container">
+        <video controls class="video">
+            <source src="media/video8.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+    <div class="footer">
+        <p>Hasta el día de hoy...</p>
+    </div>
+
+    <div class="video-container">
+        <img src="/media/foxy.jpeg" alt="">
+    </div>
+
+    <div class="audio-container">
+        <audio id="background-audio" controls class="audio">
+            <source src="media/videoplayback.m4a" type="audio/mpeg">
+            Tu navegador no soporta la etiqueta de audio.
+        </audio>
+    </div>
+
+    <div class="audio-container">
+        <audio id="entry-audio" class="audio">
+            <source src="media/Foxy Sings in Pirate Cove.mp3" type="audio/mpeg"> <!-- Cambia el nombre aquí -->
+            Tu navegador no soporta la etiqueta de audio.
+        </audio>
+    </div>
+
+    <script>
+        // Obtener todos los elementos de video
+        const videos = document.querySelectorAll('.video');
+        const entryAudio = document.getElementById('entry-audio');
+
+        // Añadir un evento de reproducción a cada video
+        videos.forEach(video => {
+            video.addEventListener('play', () => {
+                // Pausar todos los otros videos
+                videos.forEach(otherVideo => {
+                    if (otherVideo !== video) {
+                        otherVideo.pause();
+                    }
+                });
+                // Pausar el audio de entrada
+                entryAudio.pause();
+            });
+        });
+
+        // Reproducir el audio de entrada al cargar la página
+        window.onload = () => {
+            entryAudio.play().catch(error => {
+                console.log('Error al reproducir el audio: ', error);
+            });
+        };
+    </script>
+
+</body>
+</html>

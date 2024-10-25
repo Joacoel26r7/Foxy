@@ -1,0 +1,80 @@
+html {
+    background-image: url(https://i.pinimg.com/enabled_hi/564x/a9/13/e3/a913e3cc68528dc782648bcaa56cfb00.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Mantiene el contenido centrado */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #3e1a1a;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.main-video {
+    margin-bottom: 20px; /* Espacio entre el video principal y el footer */
+}
+
+video {
+    border: 5px solid #3f1717;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    width: 300px; /* Ancho fijo */
+    height: 300px; /* Alto fijo para mantener el cuadrado */
+    object-fit: cover; /* Ajusta la imagen del video */
+}
+
+video:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre videos */
+}
+
+@media (max-width: 600px) {
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+p {
+    font-size: 30px;
+}
+
+#volver {
+    color: rgb(224, 7, 7); /* Color del texto */
+    font-style: normal; /* Estilo de fuente normal */
+    font-weight: bolder; /* Peso de fuente más grueso */
+    text-decoration: none; /* Sin subrayado */
+    text-align: left; /* Alineación a la izquierda */
+    align-self: flex-start; /* Alineación dentro del contenedor flex */
+    margin-top: 20px; /* Espacio superior */
+    width: 100%; /* Ancho completo */
+    font-size: 25px; /* Tamaño de fuente */
+}
